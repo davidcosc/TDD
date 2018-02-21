@@ -45,4 +45,10 @@ public class ElementSetTest {
         elements.add(1);
         assert elements.contains(1) == true;
     }
+
+    @Test
+    public void testContainsFilledSetFalse() throws Exception {
+        elements.add(1);
+        assert elements.contains(2) == false;
+    }
 }

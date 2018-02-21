@@ -4,6 +4,7 @@ package MyFirstTDD;
  * Created by david on 21.02.2018.
  */
 public class ElementSet {
+    Object[] elements = new Object[2];
     int size = 0;
 
     public boolean isEmpty() {
@@ -11,6 +12,7 @@ public class ElementSet {
     }
 
     public void add(Object element) {
+        elements[0] = element;
         size++;
     }
 
@@ -19,6 +21,13 @@ public class ElementSet {
     }
 
     public boolean contains(Object element) {
-        return (getSize() > 0);
+        if(getSize() == 0) {
+            return false;
+        }
+
+        if(elements[0].equals(element)) {
+            return true;
+        }
+        return false;
     }
 }
