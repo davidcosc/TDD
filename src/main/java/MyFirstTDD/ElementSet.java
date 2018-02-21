@@ -7,7 +7,7 @@ public class ElementSet {
     int size = 0;
 
     public boolean isEmpty() {
-        return (size == 0);
+        return (getSize() == 0);
     }
 
     public void add(Object element) {
