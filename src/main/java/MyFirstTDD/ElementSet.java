@@ -10,7 +10,7 @@ public class ElementSet {
         return (size == 0);
     }
 
-    public void add() {
+    public void add(Object element) {
         size++;
     }
 

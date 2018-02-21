@@ -20,12 +20,18 @@ public class ElementSetTest {
 
     @Test
     public void testIsEmptyOnFilledSet() throws Exception {
-        elements.add();
+        elements.add(1);
         assert elements.isEmpty() == false;
     }
 
     @Test
     public void testGetSizeOnEmptySet() throws Exception {
         assert elements.getSize() == 0;
+    }
+
+    @Test
+    public void testGetSizeOnFilledSet() throws Exception {
+        elements.add("2");
+        assert elements.getSize() == 1;
     }
 }
