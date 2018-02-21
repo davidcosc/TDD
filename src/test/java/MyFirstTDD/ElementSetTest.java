@@ -39,4 +39,10 @@ public class ElementSetTest {
     public void testContainsOnEmptySet() throws Exception {
         assert elements.contains(1) == false;
     }
+
+    @Test
+    public void testContainsOnFilledSetTrue() throws Exception {
+        elements.add(1);
+        assert elements.contains(1) == true;
+    }
 }

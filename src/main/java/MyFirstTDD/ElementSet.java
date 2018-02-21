@@ -19,6 +19,6 @@ public class ElementSet {
     }
 
     public boolean contains(Object element) {
-        return false;
+        return (getSize() > 0);
     }
 }
