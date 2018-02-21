@@ -23,4 +23,9 @@ public class ElementSetTest {
         elements.add();
         assert elements.isEmpty() == false;
     }
+
+    @Test
+    public void testGetSizeOnEmptySet() throws Exception {
+        assert elements.getSize() == 0;
+    }
 }

@@ -13,4 +13,8 @@ public class ElementSet {
     public void add() {
         size++;
     }
+
+    public int getSize() {
+        return size;
+    }
 }
