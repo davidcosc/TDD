@@ -34,4 +34,9 @@ public class ElementSetTest {
         elements.add("2");
         assert elements.getSize() == 1;
     }
+
+    @Test
+    public void testContainsOnEmptySet() throws Exception {
+        assert elements.contains(1) == false;
+    }
 }
