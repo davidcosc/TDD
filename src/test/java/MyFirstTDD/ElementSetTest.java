@@ -7,8 +7,14 @@ import org.junit.Test;
  */
 public class ElementSetTest {
     @Test
-    public void testElementSetIsEmpty() throws Exception {
+    public void testElementSetIsEmptyOnEmptySet() throws Exception {
         ElementSet elements = new ElementSet();
         assert elements.isEmpty() == true;
+    }
+
+    @Test
+    public void testElementSetSizeOnEmptySet() throws Exception {
+        ElementSet elements = new ElementSet();
+        assert elements.size() == 0;
     }
 }
