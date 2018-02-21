@@ -19,4 +19,9 @@ public class OperandStack {
     public void push(BigDecimal value) {
         values.push(value);
     }
+
+    public void replacePeek(BigDecimal value) {
+        values.pop();
+        values.push(value);
+    }
 }

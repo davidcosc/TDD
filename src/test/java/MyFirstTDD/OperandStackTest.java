@@ -32,6 +32,17 @@ public class OperandStackTest {
 
     @Test
     public void testReplacePeekValueOfStack() throws Exception {
+        BigDecimal value01 = new BigDecimal(15);
+        BigDecimal value02 = new BigDecimal(16);
+        values.push(value01);
+        values.replacePeek(value02);
+        assertEquals(value02, values.getPeek());
+    }
 
+    @Test
+    public void testReplacingPeekValueOfStackUsingEmptyStack() throws Exception {
+        BigDecimal value = new BigDecimal(15);
+        values.replacePeek(value);
+        assertEquals(value, values.getPeek());
     }
 }
