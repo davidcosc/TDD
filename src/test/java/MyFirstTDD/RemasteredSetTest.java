@@ -31,4 +31,22 @@ public class RemasteredSetTest {
         elements.add("2");
         assert elements.isEmpty() == false;
     }
+
+    @Test
+    public void testSizeOnEmptySet() throws Exception {
+        assert elements.size() == 0;
+    }
+
+    @Test
+    public void testSizeOnSetWithOneElement() throws Exception {
+        elements.add(1);
+        assert elements.size() == 1;
+    }
+
+    @Test
+    public void testSizeOnSetWithTwoElements() throws Exception {
+        elements.add(1);
+        elements.add("2");
+        assert elements.size() > 1;
+    }
 }
