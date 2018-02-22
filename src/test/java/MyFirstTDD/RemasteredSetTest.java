@@ -49,4 +49,35 @@ public class RemasteredSetTest {
         elements.add("2");
         assert elements.size() > 1;
     }
+
+    @Test
+    public void testContainsOnEmptySet() throws Exception {
+        assert elements.contains(1) == false;
+    }
+
+    @Test
+    public void testContainsOnSetWithOneElementNoMatching() throws Exception {
+        elements.add(1);
+        assert elements.contains("2") == false;
+    }
+
+    @Test
+    public void testContainsOnSetWithOneElementOneMatching() throws Exception {
+        elements.add(3);
+        assert elements.contains(3) == true;
+    }
+
+    @Test
+    public void testContainsOnSetWithTwoElementsNoMatching() throws Exception {
+        elements.add(1);
+        elements.add("2");
+        assert elements.contains(3) == false;
+    }
+
+    @Test
+    public void testContainsOnSetWithTwoElementsOneMatching() throws Exception {
+        elements.add(1);
+        elements.add("2");
+        assert elements.contains("2") == true;
+    }
 }
